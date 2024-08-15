@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31A424E3-5BE0-4210-8298-1748D7F10D12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>APQP</RootNamespace>
+    <AssemblyName>APQP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\172.17.140.16\it data%24\IT-002-Publish\05. Tu\03. APQP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\172.17.140.16\it data%24\IT-002-Publish\05. Tu\03. APQP\</UpdateUrl>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>68</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DBDDC7BB8F8EF2FA2B7E1EF4593DA3E498E8B4EA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>APQP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iteration.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Constaint.cs" />
+    <Compile Include="DB\DBUtils.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_HISTORY_NEW_MOLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_HISTORY_NEW_MOLD.Designer.cs">
+      <DependentUpon>FRM_HISTORY_NEW_MOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_PRODUCTION_PLAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_PRODUCTION_PLAN.Designer.cs">
+      <DependentUpon>FRM_PRODUCTION_PLAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_ADD_FEASIBILITY_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_ADD_FEASIBILITY_MST.Designer.cs">
+      <DependentUpon>FRM_ADD_FEASIBILITY_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY.Designer.cs">
+      <DependentUpon>FRM_FEASIBILITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY_MST.Designer.cs">
+      <DependentUpon>FRM_FEASIBILITY_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_ADD_PREPARATION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_ADD_PREPARATION_MST.Designer.cs">
+      <DependentUpon>FRM_ADD_PREPARATION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_PREPARATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_PREPARATION.Designer.cs">
+      <DependentUpon>FRM_PREPARATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_PREPARATION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\04_PREPARATION\FRM_PREPARATION_MST.Designer.cs">
+      <DependentUpon>FRM_PREPARATION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_PREPARATION_TRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_PREPARATION_TRY.Designer.cs">
+      <DependentUpon>FRM_ADD_PREPARATION_TRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_PREPARATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_PREPARATION.Designer.cs">
+      <DependentUpon>FRM_CONFIRM_PREPARATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_MST.Designer.cs">
+      <DependentUpon>FRM_PREPARATION_TRY_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_STAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_STAGE.Designer.cs">
+      <DependentUpon>FRM_PREPARATION_TRY_STAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_EVALUATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_EVALUATION.Designer.cs">
+      <DependentUpon>FRM_ADD_OTHER_EVALUATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_VALUABLE_EVALUATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_VALUABLE_EVALUATION.Designer.cs">
+      <DependentUpon>FRM_ADD_OTHER_VALUABLE_EVALUATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_TRIAL_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_TRIAL_PRODUCTION.Designer.cs">
+      <DependentUpon>FRM_ADD_TRIAL_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_TRIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_TRIAL.Designer.cs">
+      <DependentUpon>FRM_CONFIRM_TRIAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY.Designer.cs">
+      <DependentUpon>FRM_DETAIL_TRY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY_TER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY_TER.Designer.cs">
+      <DependentUpon>FRM_DETAIL_TRY_TER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_EVALUATION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_EVALUATION_MST.Designer.cs">
+      <DependentUpon>FRM_OTHER_EVALUATION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_VALUABLE_EVALUATION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_VALUABLE_EVALUATION_MST.Designer.cs">
+      <DependentUpon>FRM_OTHER_VALUABLE_EVALUATION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_CONFIRMATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_CONFIRMATION.Designer.cs">
+      <DependentUpon>FRM_TRIAL_CONFIRMATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION.Designer.cs">
+      <DependentUpon>FRM_TRIAL_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION_MST.Designer.cs">
+      <DependentUpon>FRM_TRIAL_PRODUCTION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_ADD_MASS_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_ADD_MASS_PRODUCTION.Designer.cs">
+      <DependentUpon>FRM_ADD_MASS_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION.Designer.cs">
+      <DependentUpon>FRM_MASS_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION_MST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION_MST.Designer.cs">
+      <DependentUpon>FRM_MASS_PRODUCTION_MST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\07_FOLLOW_UP\FRM_FOLLOW_UP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\07_FOLLOW_UP\FRM_FOLLOW_UP.Designer.cs">
+      <DependentUpon>FRM_FOLLOW_UP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ACCOUNT_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ACCOUNT_LIST.Designer.cs">
+      <DependentUpon>FRM_ACCOUNT_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_ADD_ACCOUNT.Designer.cs">
+      <DependentUpon>FRM_ADD_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.Designer.cs">
+      <DependentUpon>FRM_CHANGE_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.Designer.cs">
+      <DependentUpon>FRM_UPDATE_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_MAIN.Designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_ADD_NEW_MOLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_ADD_NEW_MOLD.Designer.cs">
+      <DependentUpon>FRM_ADD_NEW_MOLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_NEW_MOLD_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\01_NEW_MOLD_MST\FRM_NEW_MOLD_LIST.Designer.cs">
+      <DependentUpon>FRM_NEW_MOLD_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\02_PRODUCT_INFO\FRM_PRODUCT_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\02_PRODUCT_INFO\FRM_PRODUCT_INFO.Designer.cs">
+      <DependentUpon>FRM_PRODUCT_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRM_USER_CHANGE_PASSWORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRM_USER_CHANGE_PASSWORD.Designer.cs">
+      <DependentUpon>FRM_USER_CHANGE_PASSWORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\01_NEW_MOLD_MST\FRM_HISTORY_NEW_MOLD.resx">
+      <DependentUpon>FRM_HISTORY_NEW_MOLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\01_NEW_MOLD_MST\FRM_PRODUCTION_PLAN.resx">
+      <DependentUpon>FRM_PRODUCTION_PLAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\03_FEASIBILITY\FRM_ADD_FEASIBILITY_MST.resx">
+      <DependentUpon>FRM_ADD_FEASIBILITY_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY.resx">
+      <DependentUpon>FRM_FEASIBILITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\03_FEASIBILITY\FRM_FEASIBILITY_MST.resx">
+      <DependentUpon>FRM_FEASIBILITY_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\04_PREPARATION\FRM_ADD_PREPARATION_MST.resx">
+      <DependentUpon>FRM_ADD_PREPARATION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\04_PREPARATION\FRM_PREPARATION.resx">
+      <DependentUpon>FRM_PREPARATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\04_PREPARATION\FRM_PREPARATION_MST.resx">
+      <DependentUpon>FRM_PREPARATION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_PREPARATION_TRY.resx">
+      <DependentUpon>FRM_ADD_PREPARATION_TRY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_PREPARATION.resx">
+      <DependentUpon>FRM_CONFIRM_PREPARATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_MST.resx">
+      <DependentUpon>FRM_PREPARATION_TRY_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_PREPARATION_TRY_STAGE.resx">
+      <DependentUpon>FRM_PREPARATION_TRY_STAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_EVALUATION.resx">
+      <DependentUpon>FRM_ADD_OTHER_EVALUATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_OTHER_VALUABLE_EVALUATION.resx">
+      <DependentUpon>FRM_ADD_OTHER_VALUABLE_EVALUATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_ADD_TRIAL_PRODUCTION.resx">
+      <DependentUpon>FRM_ADD_TRIAL_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_CONFIRM_TRIAL.resx">
+      <DependentUpon>FRM_CONFIRM_TRIAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY.resx">
+      <DependentUpon>FRM_DETAIL_TRY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_DETAIL_TRY_TER.resx">
+      <DependentUpon>FRM_DETAIL_TRY_TER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_EVALUATION_MST.resx">
+      <DependentUpon>FRM_OTHER_EVALUATION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_OTHER_VALUABLE_EVALUATION_MST.resx">
+      <DependentUpon>FRM_OTHER_VALUABLE_EVALUATION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_CONFIRMATION.resx">
+      <DependentUpon>FRM_TRIAL_CONFIRMATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION.resx">
+      <DependentUpon>FRM_TRIAL_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\05_TRIAL_PRODUCTION\FRM_TRIAL_PRODUCTION_MST.resx">
+      <DependentUpon>FRM_TRIAL_PRODUCTION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\06_MASS_PRODUCTION\FRM_ADD_MASS_PRODUCTION.resx">
+      <DependentUpon>FRM_ADD_MASS_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION.resx">
+      <DependentUpon>FRM_MASS_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\06_MASS_PRODUCTION\FRM_MASS_PRODUCTION_MST.resx">
+      <DependentUpon>FRM_MASS_PRODUCTION_MST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\07_FOLLOW_UP\FRM_FOLLOW_UP.resx">
+      <DependentUpon>FRM_FOLLOW_UP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_ACCOUNT_LIST.resx">
+      <DependentUpon>FRM_ACCOUNT_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_ADD_ACCOUNT.resx">
+      <DependentUpon>FRM_ADD_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_CHANGE_PASSWORD.resx">
+      <DependentUpon>FRM_CHANGE_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\ADMIN\FRM_UPDATE_ACCOUNT.resx">
+      <DependentUpon>FRM_UPDATE_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\01_NEW_MOLD_MST\FRM_ADD_NEW_MOLD.resx">
+      <DependentUpon>FRM_ADD_NEW_MOLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\01_NEW_MOLD_MST\FRM_NEW_MOLD_LIST.resx">
+      <DependentUpon>FRM_NEW_MOLD_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\02_PRODUCT_INFO\FRM_PRODUCT_INFO.resx">
+      <DependentUpon>FRM_PRODUCT_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRM_USER_CHANGE_PASSWORD.resx">
+      <DependentUpon>FRM_USER_CHANGE_PASSWORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="APQP_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_login_man-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6676583.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\APQP.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOUser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AssignTo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_ResetPassword_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_Exit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iteration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iteration.ico" />
+    <None Include="Resources\Action_Close_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
